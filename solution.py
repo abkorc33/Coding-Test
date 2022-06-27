@@ -15,10 +15,11 @@ def solution(participant, completion):
 
 print(solution(["leo", "kiki", "eden"], ["eden", "kiki"]))
 
-#간결한 다른사람 풀이 (collecions 와 Counter)
+#간결한 다른사람 풀이(collecions모듈의 Counter)
 
 import collections
 
 def solution(participant, completion):
     answer = collections.Counter(participant) - collections.Counter(completion)
     return list(answer.keys())[0]
+#Counter객체끼리는 뺄셈이 가능하다
